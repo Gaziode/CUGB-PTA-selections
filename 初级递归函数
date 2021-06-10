@@ -1,0 +1,13 @@
+int tao(int day) {
+    if (day <= 0)
+    {
+        return 0;
+    }
+    else if (day > 0 && day <= 1)
+    {
+        return 1;
+    }
+    else {
+        return tao(day - 1) * 2 + 1;
+    }
+}
