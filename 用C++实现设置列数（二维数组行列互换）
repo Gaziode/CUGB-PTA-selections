@@ -1,0 +1,28 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main(){
+	int m=0,n=0;
+	cin>>m>>n;
+	int a[m][n];
+	for(int i=0;i<m;i++){
+		for(int j=0;j<n;j++){
+			cin>>a[i][j];
+		}
+	}
+	
+	int b[n][m];
+	for(int k=0;k<n;k++){
+		for(int l=0;l<m;l++){
+			b[k][l]=a[l][k];
+		}
+	}
+	
+	for(int k=0;k<n;k++){
+		for(int l=0;l<m;l++){
+			cout<<setw(5)<<b[k][l];
+		}
+		cout<<endl;
+	}
+}
