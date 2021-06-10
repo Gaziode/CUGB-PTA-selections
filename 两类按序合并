@@ -1,0 +1,63 @@
+//数值型
+int main(  )
+{
+     const int N=5;
+     const int M=5;
+     int a[N]={1,4,7,17,23};
+     int b[M]={2,6,9,10,15};
+     int c[N+M];
+     int i=0, j=0, k=0;
+     while( 
+i<N&&j<M
+ )                     //两个数组都有值时，将较小值写入c中
+     {
+         if(a[i]<b[j])
+         {c[k]= a[i]; i++; }
+          else
+         {c[k]=b[j]; j++; }
+        k++;
+     }
+
+   if(i>=N)
+        while(j<M)               //将b中其余值都写入c中
+        c[k++]=b[j++]; 
+
+   if(j>=M)
+        while(i<N)               //将a中其余值都写入c中
+        { 
+            
+c[k++]=a[i++];
+
+         }
+    for(int i=0;i<N+M;i++)
+       cout << c[i] << " ";
+
+    return 0;
+}
+//字符型
+void insertString (char str[], char c);
+
+int main()
+{
+	char str[100],c;
+	cin.getline(str,99);
+	cin>>c;
+	
+insertString (str,  c);
+
+	cout<<str<<endl;
+	return 0;
+}
+void insertString (char str[], char c)
+{
+	int n,i;
+	for(n=0;str[n]!=0;n++)
+		;
+	str[n+1]='\0';
+	for(i=n-1;i>=0;i--)
+		if(str[i]>c)
+			str[i+1]=str[i];
+		else
+			break;
+	str[i+1]=c;
+}
