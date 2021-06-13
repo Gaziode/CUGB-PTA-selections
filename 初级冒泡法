@@ -18,7 +18,7 @@ void BubbleSort(int a[],int n)
 {
 	int i,j;
 	for(j=0;j<n;j++)//运行次数为数组中的元素个数
-		for(i=0;i<n-j;i++)//每次比较n-j次
+		for(i=0;i<n-j-1;i++)//每次比较n-j-1次
 			if(a[i]>a[i+1])
 			{
 				int t=a[i];//将较大的数移到数组的末尾
